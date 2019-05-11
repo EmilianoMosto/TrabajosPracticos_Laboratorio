@@ -33,16 +33,18 @@ int buscarEmpleado(eEmpleado empleado [], int cantidadEmpleados)
     return indice;
 }
 
-int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre, int idIncremental)
+int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int i, int idIncremental)
 {
-    int i;
+    //int i;
     int indice;
     int flag=0;
+    //int idIncremental=0;
 
     indice = buscarEmpleado(empleado, cantidadEmpleados);
 
     if(indice != 1)
     {
+        empleado[i].id=idIncremental+1;
         for(i=0; i<cantidadEmpleados; i++)
         {
 
@@ -66,7 +68,7 @@ int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre,
 
             flag = 1;
 
-            idIncremental = i+1;
+            //idIncremental = i+1;
 
             printf("\nID de empleado: %d\n\n",idIncremental);
             system("PAUSE");
@@ -76,8 +78,9 @@ int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre,
     }
     else
     {
-        return flag;
+        printf("\nError");
     }
+    return -1;
 }
 
 void bajaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int idIncremental)
@@ -142,7 +145,7 @@ void modificarEmpleado(eEmpleado empleado[], int cantidadEmpleados, int idIncrem
         printf("\nID: %d\t Apellido: %s\t Nombre: %s\n",idIncremental , empleado[i].apellido, empleado[i].nombre);
         scanf("%d",&auxiliarMenu);
 
-        if( empleado[i].idIncremental == auxiliarMenu)
+        if( empleado[i].id == auxiliarMenu)
         {
 
             do

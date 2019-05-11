@@ -7,6 +7,8 @@
 
 #define cantidadEmpleados 10
 
+// NOTA: ESTUVE QUERIENDO SOLUCIONAR DE TODAS LAS FORMAS POSIBLES EL INCREMENTAL, Y JAMAS PUDÉ LOGRAR LO QUE PRETENDÍA
+// TAMBIÈN DESCONOZCO PORQUE AL QUERER DAR 2 ALTAS CONSECUTIVOS NO TE LO PERMITE, PERO SÍ, SI EN EL MEDIO INFORMAS RESULTADOS
 int main()
 {
     eEmpleado empleado[cantidadEmpleados];
@@ -16,7 +18,7 @@ int main()
     int espacioLibre;
     float todosLosSalarios;
     int altaAuxiliar;
-    int idIncremental=1;
+    int idIncremental=0;
     int flag=0;
     int contadorEmpleado;
     float promedioSalario;
@@ -43,10 +45,11 @@ int main()
                 printf("\nNo hay espacio.");
             }
             altaAuxiliar = altaEmpleado(empleado, cantidadEmpleados, espacioLibre, idIncremental);
-            if(altaAuxiliar!= -1)
+            if(altaAuxiliar== -1)
             {
                 printf("\nAlta exitosa");
-                //idIncremental++;
+                system("PAUSE");
+                idIncremental++;
                 flag =1;
             }
             else

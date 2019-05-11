@@ -1,6 +1,6 @@
 typedef struct
 {
-    int idIncremental;
+    int id;
     char nombre[51];
     char apellido[51];
     float salario;
@@ -28,7 +28,7 @@ int buscarEmpleado (eEmpleado empleado [], int cantidadEmpleados);
  *  \param  i es el indice donde realiza el alta.
  *  \return  retorna el Id con sus datos, o -1 si fallo algo.
  */
-int altaEmpleado (eEmpleado empleado [], int cantidadEmpleados, int espacioLibre, int idIncremental);
+int altaEmpleado (eEmpleado empleado [], int cantidadEmpleados, int i, int idIncremental);
 
 /** \brief  doy de baja algun empleado (si hay).
  *  \param  cantidadEmpleados es la cantidad máxima que puede haber.

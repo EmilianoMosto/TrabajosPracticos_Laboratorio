@@ -6,18 +6,18 @@
 	<string.h>
 	<ctype.h>
 
-1557541013 source:c:\users\ryuushin\desktop\abm_tp2_laboratorio\main.c
+1557542467 source:c:\users\ryuushin\desktop\abm_tp2_laboratorio\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"empleados.h"
 	"utn.h"
 
-1557541013 c:\users\ryuushin\desktop\abm_tp2_laboratorio\empleados.h
+1557542666 c:\users\ryuushin\desktop\abm_tp2_laboratorio\empleados.h
 
 1557537980 c:\users\ryuushin\desktop\abm_tp2_laboratorio\utn.h
 
-1557538625 source:c:\users\ryuushin\desktop\abm_tp2_laboratorio\empleados.c
+1557542722 source:c:\users\ryuushin\desktop\abm_tp2_laboratorio\empleados.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

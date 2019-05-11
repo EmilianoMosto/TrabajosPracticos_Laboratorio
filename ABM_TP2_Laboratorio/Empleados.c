@@ -33,7 +33,7 @@ int buscarEmpleado(eEmpleado empleado [], int cantidadEmpleados)
     return indice;
 }
 
-int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre, int *idIncremental)
+int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre, int idIncremental)
 {
     int i;
     int indice;
@@ -43,14 +43,8 @@ int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre,
 
     if(indice != 1)
     {
-            /*if(getStringNumeros("\nIngrese el ID: ", empleado[i].id) != 1)
-            {
-                printf("\nError, Ingrese nuevamente els ID: ");
-                scanf("%d",&empleado[i].id);
-            }*/
         for(i=0; i<cantidadEmpleados; i++)
         {
-
 
             if(getStringLetras("\nIngrese el apellido: ", empleado[i].apellido) == -1 || lengthString(empleado[i].apellido, 31) == 1)
             {
@@ -69,9 +63,12 @@ int altaEmpleado(eEmpleado empleado [], int cantidadEmpleados, int espacioLibre,
             empleado[i].sector = getIntLimitado("\nIngrese el sector: ", "Ingrese un sector de un solo digito: ", 1, 9);
 
             empleado[i].isEmpty = 1;
+
             flag = 1;
-            empleado[i].idIncremental = i+1;
-            printf("\nID de empleado: %d\n\n",*idIncremental);
+
+            idIncremental = i+1;
+
+            printf("\nID de empleado: %d\n\n",idIncremental);
             system("PAUSE");
             break;
             return flag;
@@ -250,7 +247,7 @@ void ordenarEmpleado(eEmpleado empleado[], int cantidadEmpleados)
     }
 }
 
-void mostrarEmpleado (eEmpleado empleado [], int cantidadEmpleados, int *idIncremental)
+void mostrarEmpleado (eEmpleado empleado [], int cantidadEmpleados, int idIncremental)
 {
     int i;
 
@@ -259,7 +256,7 @@ void mostrarEmpleado (eEmpleado empleado [], int cantidadEmpleados, int *idIncre
     {
         if(empleado[i].isEmpty == 1)
         {
-            printf("Id de empleado: %d\n",*idIncremental);
+            printf("Id de empleado: %d\n",idIncremental);
             printf("Apellido: %s\n", empleado[i].apellido);
             printf("Nombre: %s\n", empleado[i].nombre);
             printf("Salario: %.2f\n", empleado[i].salario);

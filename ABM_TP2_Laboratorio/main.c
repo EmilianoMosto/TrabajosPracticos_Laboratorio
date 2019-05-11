@@ -42,7 +42,7 @@ int main()
             {
                 printf("\nNo hay espacio.");
             }
-            altaAuxiliar = altaEmpleado(empleado, cantidadEmpleados, espacioLibre, &idIncremental);
+            altaAuxiliar = altaEmpleado(empleado, cantidadEmpleados, espacioLibre, idIncremental);
             if(altaAuxiliar!= -1)
             {
                 printf("\nAlta exitosa");
@@ -88,7 +88,7 @@ int main()
             else
             {
                 ordenarEmpleado(empleado, cantidadEmpleados);
-                mostrarEmpleado(empleado, cantidadEmpleados, &idIncremental);
+                mostrarEmpleado(empleado, cantidadEmpleados, idIncremental);
                 todosLosSalarios = salarios(empleado, cantidadEmpleados);
                 printf("\nTodos los salarios suman: $%.2f",todosLosSalarios);
                 contadorEmpleado = contadorDeEmpleados(empleado, cantidadEmpleados);

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1554447405 source:c:\users\ryuushin\desktop\calculadoratrabajopractico\libreria.c
+
+1554448817 source:c:\users\ryuushin\desktop\calculadoratrabajopractico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"libreria.h"
+
+1554098264 c:\users\ryuushin\desktop\calculadoratrabajopractico\libreria.h
+
+1554447405 source:c:\users\ryuushin\desktop\programación-laboratorio\calculadoratrabajopractico\libreria.c
+
+1554514414 source:c:\users\ryuushin\desktop\programación-laboratorio\calculadoratrabajopractico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"libreria.h"
+
+1554098264 c:\users\ryuushin\desktop\programación-laboratorio\calculadoratrabajopractico\libreria.h
+
